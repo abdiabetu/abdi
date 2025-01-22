@@ -1,0 +1,15 @@
+li {
+  list-style-type: none;
+  font-size: 20px;
+}
+h1 {
+  text-align: center;
+  color: #223389;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.menu {
+  border-width: 12px;
+  border-color: black;
+  padding: auto;
+}
