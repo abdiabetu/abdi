@@ -1,15 +1,26 @@
-img {
-  display: flex;
-  margin: auto;
-  border-radius: 100px;
+header.abd {
+  background-color: #f4f2ff;
+  padding: 30px;
+  position: relative;
+  box-sizing: border-box;
+  font-family: brandon-grotesque, brandon, martel-sans, sans-serif;
+  font-style: #636972;
+  font-weight: 700;
 }
-#demo {
-  margin-left: 650px;
-  display:flex;
-
-}
+h1,
 p {
-  padding: px;
+  color: #555677;
 }
-bod
+.label {
+  font-size: 16px;
+  font-family: open-sans;
+  color: #4b5056;
+}
+#spans {
+  font-family: open-sans;
+  color: #4b5056;
+}
+.menu {
+  color: #b02bbc;
+  line-height: 1px;
 }
