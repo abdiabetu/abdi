@@ -5,32 +5,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>This is HTML</title>
+    <style>
+      .mystyle {
+        width: 300px;
+        height: 50px;
+        text-align: center;
+        background-color: coral;
+        color: white;
+        margin-bottom: 10px;
+        float: left;
+        margin: 8px;
+      }
+    </style>
   </head>
-  <body
-    background="https://www.free-css.com/assets/files/free-css-templates/preview/page296/carvilla/assets/images/welcome-banner.jpg"
-  >
-    <header class="menu">
-      <a href="https://carvilla">CARVILLA</a>
-      <div class="get">
-        <nav>
-          <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">FEATURED CARS</a></li>
-            <li><a href="#">NEW CARS</a></li>
-            <li><a href="#">BRANDS</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <h1>GET YOUR DESIRED CAR IN REASONABLE PRICE</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button>CONTACT US</button>
-      </div>
-    </header>
+  <body>
+    <p>
+      In this example, we search for the first div element in the document.
+      Then, if the div element has an id of "myDIV" - change its font size.
+    </p>
+
+    <button onclick="myFunction()">Try it</button><br />
+
+    <div id="myDIV" class="mystyle">I am a DIV element</div>
+
+    <div class="mystyle">I am also DIV element</div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementsByTagName("DIV")[0];
+
+        if (x.id === "myDIV") {
+          x.style.fontSize = "30px";
+        }
+      }
+    </script>
   </body>
 </html>

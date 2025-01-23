@@ -9,13 +9,21 @@
   <p id="demo"></p>
   <body>
     
-    <button onclick="abdi()">Click me</button>
+    <!--<button onclick="abdi()">Click me</button>-->
     <script>
-      function abdi() {
+      let hour=new Date().getHours();
+    let greeting;
+    if(hour < 10){
+   greeting="Good day";
+    }else if(hour < 20){
+      greeting="Good afrernoon";
+    } else{
+      greeting="Good evening"
+    }
 
-       document.getElementById("demo").innerHTML = "Hello,There!";
+       document.getElementById("demo").innerHTML =greeting;
 
-      }
       
+     
     </script>
 </html>
