@@ -5,37 +5,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>This is HTML</title>
-    <style>
-      .mystyle {
-        width: 300px;
-        height: 50px;
-        text-align: center;
-        background-color: coral;
-        color: white;
-        margin-bottom: 10px;
-        float: left;
-        margin: 8px;
-      }
-    </style>
   </head>
   <body>
-    <p>
-      In this example, we search for the first div element in the document.
-      Then, if the div element has an id of "myDIV" - change its font size.
-    </p>
+    <h1>JavaScript Statements</h1>
+    <h2>The if...else Statements</h2>
 
-    <button onclick="myFunction()">Try it</button><br />
+    <img id="myImage" onclick="changeImage()" src="" width="100" height="180" />
 
-    <div id="myDIV" class="mystyle">I am a DIV element</div>
-
-    <div class="mystyle">I am also DIV element</div>
+    <p>Click the light bulb to turn on/off the light.</p>
 
     <script>
-      function myFunction() {
-        var x = document.getElementsByTagName("DIV")[0];
-
-        if (x.id === "myDIV") {
-          x.style.fontSize = "30px";
+      function changeImage() {
+        var image = document.getElementById("myImage");
+        if (image.src.match("bulbon")) {
+          image.src = "pic-bulboff.gif";
+        } else {
+          image.src = "pic_bulbon.gif";
         }
       }
     </script>
