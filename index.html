@@ -3,54 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
     <title>Document</title>
-    <style>
-      body {
-        font-family: "Poppins", serif;
-      }
-      .header {
-        /* border: 1px solid black; */
-        width: 500px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .header_logo img {
-        width: 80px;
-      }
-      .header_nav ul {
-        display: flex;
-        gap: 18px;
-        list-style: none;
-      }
-      .header_nav a {
-        text-decoration: none;
-        color: black;
-      }
-    </style>
   </head>
   <body>
-    <header class="header">
-      <div class="header_logo">
-        <img src="./logo.png" alt="logo" />
-      </div>
-      <nav class="header_nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Classes</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="hero_section"></section>
+    <p id="demo"></p>
+    <script>
+      let text = String.fromCharCode(
+        72,
+        34,
+        56,
+        78,
+        88,
+        88,
+        99,
+        00,
+        12,
+        2322,
+        44,
+        4
+      );
+      document.getElementById("demo").innerHTML = text;
+    </script>
   </body>
 </html>
