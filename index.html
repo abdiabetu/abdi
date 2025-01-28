@@ -8,21 +8,18 @@
   <body>
     <p id="demo"></p>
     <script>
-      let text = String.fromCharCode(
-        72,
-        34,
-        56,
-        78,
-        88,
-        88,
-        99,
-        00,
-        12,
-        2322,
-        44,
-        4
-      );
-      document.getElementById("demo").innerHTML = text;
+      function person(first, last, age, eyecolor) {
+        this.frist = first;
+        this.last = last;
+        this.age = age;
+        this.eyecolor = eyecolor;
+      }
+
+      const myfather = new person("abdi", "abetu", "blue");
+      const mymother = new person("uma", "ifti", "red");
+      person.prototype.nationality = "English";
+      document.getElementById("demo").innerHTML =
+        "my father is" + myfather.nationality;
     </script>
   </body>
 </html>
