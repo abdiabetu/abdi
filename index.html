@@ -8,18 +8,9 @@
   <body>
     <p id="demo"></p>
     <script>
-      window.addEventListener("mouseover", myfunction);
-      window.addEventListener("mouseout", myfunction1);
-      window.addEventListener("click", myfunction2);
-      function myfunction() {
-        document.getElementById("demo").innerHTML += "mouse over";
-      }
-      function myfunction1() {
-        document.getElementById("demo").innerHTML += "mouseout";
-      }
-      function myfunction2() {
-        document.getElementById("demo").innerHTML += "click";
-      }
+      document.addEventListener("mouseover", function () {
+        document.body.style.backgroundColor = "#568899";
+      });
     </script>
   </body>
 </html>
