@@ -8,18 +8,18 @@
   <body>
     <p id="demo"></p>
     <script>
-      function person(first, last, age, eyecolor) {
-        this.frist = first;
-        this.last = last;
-        this.age = age;
-        this.eyecolor = eyecolor;
+      window.addEventListener("mouseover", myfunction);
+      window.addEventListener("mouseout", myfunction1);
+      window.addEventListener("click", myfunction2);
+      function myfunction() {
+        document.getElementById("demo").innerHTML += "mouse over";
       }
-
-      const myfather = new person("abdi", "abetu", "blue");
-      const mymother = new person("uma", "ifti", "red");
-      person.prototype.nationality = "English";
-      document.getElementById("demo").innerHTML =
-        "my father is" + myfather.nationality;
+      function myfunction1() {
+        document.getElementById("demo").innerHTML += "mouseout";
+      }
+      function myfunction2() {
+        document.getElementById("demo").innerHTML += "click";
+      }
     </script>
   </body>
 </html>
