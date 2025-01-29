@@ -8,9 +8,10 @@
   <body>
     <p id="demo"></p>
     <script>
-      document.addEventListener("mouseover", function () {
-        document.body.style.backgroundColor = "#568899";
-      });
+      window.addEventListner("mouseover", myfunction);
+      function myfunction() {
+        document.getElementById("demo").innerHTML = Math.random();
+      }
     </script>
   </body>
 </html>
