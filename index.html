@@ -6,15 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-    <button onclick="removehandler()">Remove</button>
+    <button onclick="stopColor()">stop toggling</button>
     <p id="demo"></p>
     <script>
-      window.addEventListener("mouseover", myfunction);
-      function myfunction() {
-        document.getElementById("demo").innerHTML = Math.random();
+      myInterval = setInterval(setColor, 500);
+      function setColor() {
+        let x = document.body;
+        x.style.backgroundColor =
+          x.style.backgroundColor == "yellow" ? "pink" : "yellow";
       }
-      function removehandler() {
-        window.removeEventListener("mouseover", myfunction);
+      {
+        function stopColor() {
+          clearInterval(myInterval);
+        }
       }
     </script>
   </body>
