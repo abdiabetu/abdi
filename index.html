@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <style>
-    #myProgress {
-      width: 100%;
-      height: 30px;
-      position: relative;
-      background-color: #ddd;
-    }
-
-    #myBar {
-      background-color: #4caf50;
-      width: 10px;
-      height: 30px;
-      position: absolute;
-    }
-  </style>
   <body>
-    <h1>JavaScript Progress Bar</h1>
+    <h1>The Window Object</h1>
+    <h2>The setTimeout() and clearTimeout() Methods</h2>
 
-    <div id="myProgress">
-      <div id="myBar"></div>
-    </div>
+    <button onclick="startCount()">Start count!</button>
+    <input type="text" id="demo" />
+    <button onclick="stopCount()">Stop count!</button>
 
-    <br />
-    <button onclick="move()">Click Me</button>
+    <p>
+      Click on "Start count!" to start the timer. The input field will count
+      forever, starting at 0.
+    </p>
+
+    <p>
+      Click on "Stop count!" to stop counting. Click on "Start count!" to start
+      the timer again.
+    </p>
 
     <script>
-      function move() {
-        const element = document.getElementById("myBar");
-        let width = 0;
-        const id = setInterval(frame, 10);
-        function frame() {
-          if (width == 100) {
-            clearInterval(id);
-          } else {
-            width++;
-            element.style.width = width + "%";
-          }
+      let counter = 0;
+      let timeout;
+      let timer_on = 0;
+
+      function timedCount() {
+        document.getElementById("demo").value = counter;
+        counter++;
+        timeout = setTimeout(timedCount, 1000);
+      }
+
+      function startCount() {
+        if (!timer_on) {
+          timer_on = 1;
+          timedCount();
         }
+      }
+
+      function stopCount() {
+        clearTimeout(timeout);
+        timer_on = 0;
       }
     </script>
   </body>
